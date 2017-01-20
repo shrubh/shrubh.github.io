@@ -18,7 +18,9 @@ author:
   github_username: 'shrubh'
   linkedin_username: 'shruti-bhargava-90202b105'
   avatar: 'static/img/landing/Shruti.jpg'
-  desc: 'I am a senior year undergraduate student pursuing Bachelor of Technology in Computer Science and Engineering at IIT Kanpur. Last summer, I interned at Microsoft Research, Bangalore with the Machine Learning group working on anomaly detection. Previously I was a Research Fellow at Max Planck Institute for Informatics, Saarbrucken. I enjoy designing algorithms for challenging problems in Artificial Intelligence, Machine Learning, Natural Language Processing and Computer Vision.'
+  desc1: 'I am a senior year undergraduate student pursuing Bachelor of Technology in Computer Science and Engineering at IIT Kanpur.'
+  desc2: 'Last summer, I interned at Microsoft Research, Bangalore with the Machine Learning group working on anomaly detection.'
+  desc3: 'Previously I was a Research Fellow at Max Planck Institute for Informatics, Saarbrucken. I enjoy designing algorithms for challenging problems in Artificial Intelligence, Machine Learning, Natural Language Processing and Computer Vision.'
 
 # Build settings
 encoding: "utf-8"

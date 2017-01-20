@@ -42,13 +42,21 @@
   icon: fa-university
 
 - name:
-    detail: Well this area can be used to add school information
+    detail: CBSE (Class XII)
     i18n: intern_2016
-  desc:
-    detail: ping me whether you want to add schooling information or remove this section
-    i18n: intern_2016_des
   date:
     detail: 2013
+    i18n: intern_2016_date
+  job:
+    detail: Delhi Public School, Kanpur
+    i18n: intern_2016_job
+  icon: fa-book
+
+- name:
+    detail: CBSE (Class X)
+    i18n: intern_2016
+  date:
+    detail: 2011
     i18n: intern_2016_date
   job:
     detail: Delhi Public School, Kanpur
