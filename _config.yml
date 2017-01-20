@@ -1,0 +1,31 @@
+# Welcome to Jekyll!
+
+# Website settings
+title: "Shruti Bhargava"
+description: "Shruti Bhargava"
+keywords: "shruti, bhargava, shrutib, shrubh, MSR intern, Max Plank Intern"
+baseurl: "/"
+url: "http://shrubh.github.io"
+# url: "http://127.0.0.1:4000"
+
+# author
+author:
+  name: 'Shruti Bhargava'
+  first_name: 'Shruti'
+  last_name: 'Bhargava'
+  email: 'shrutib@iitk.ac.in'
+  facebook_username: 'shruti.bhargava.90'
+  github_username: 'shrubh'
+  linkedin_username: 'shruti-bhargava-90202b105'
+  avatar: 'static/img/landing/Shruti.jpg'
+  desc: 'I am a senior year undergraduate student pursuing Bachelor of Technology in Computer Science and Engineering at IIT Kanpur. Last summer, I interned at Microsoft Research, Bangalore with the Machine Learning group working on anomaly detection. Previously I was a Research Fellow at Max Planck Institute for Informatics, Saarbrucken. I enjoy designing algorithms for challenging problems in Artificial Intelligence, Machine Learning, Natural Language Processing and Computer Vision.'
+
+# Build settings
+encoding: "utf-8"
+
+# other settings
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

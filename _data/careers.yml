@@ -1,0 +1,56 @@
+# careers section data
+- name:
+    detail: Graduation
+    i18n: college
+  desc:
+    detail: I am a senior year undergraduate student pursuing Computer Science & Engineering.
+    i18n: college_des
+  date:
+    detail: Jun 2017
+    i18n: college_date
+  job:
+    detail: Indian Institute of Technology, Kanpur
+    i18n: college_job
+  icon: fa-graduation-cap
+
+- name:
+    detail: Anomaly Detection in Internet of Things (IoT) Datasets
+    i18n: intern_2016
+  desc:
+    detail: Internship - Proposed a bag of features for time-series achieving 85% accuracy in AP and 99% in WARD with model sizes as low as 2 KB
+    i18n: intern_2016_des
+  date:
+    detail: Jun 2016 - Jul 2016
+    i18n: intern_2016_date
+  job:
+    detail: Microsoft Research (MSR), Bangalore
+    i18n: intern_2016_job
+  icon: fa-th-large
+
+- name:
+    detail: Advanced Algorithmic Techniques
+    i18n: intern_2015
+  desc:
+    detail: Internship - Brought forth a partial solution to the Maximum Edge 2-Coloring problem using a variant of Tree Decomposition and Gained a closer insight into the world of algorithms and acquired knowledge of advanced techniques
+    i18n: intern_2015_des
+  date:
+    detail: May 2015 - Jul 2015
+    i18n: intern_2015_date
+  job:
+    detail: Max-Planck Institute for Informatics (MPII), Saarbrucken
+    i18n: intern_2015_job
+  icon: fa-university
+
+- name:
+    detail: Well this area can be used to add school information
+    i18n: intern_2016
+  desc:
+    detail: ping me whether you want to add schooling information or remove this section
+    i18n: intern_2016_des
+  date:
+    detail: 2013
+    i18n: intern_2016_date
+  job:
+    detail: Delhi Public School, Kanpur
+    i18n: intern_2016_job
+  icon: fa-book
