@@ -13,15 +13,13 @@ author:
   name: 'Shruti Bhargava'
   first_name: 'Shruti'
   last_name: 'Bhargava'
-  email: 'shrutib@iitk.ac.in'
+  email: 'shrutib2@illinois.edu'
   facebook_username: 'shruti.bhargava.90'
   github_username: 'shrubh'
   linkedin_username: 'shruti-bhargava-90202b105'
   avatar: 'static/img/landing/Shruti.jpg'
-  desc1: 'I am a senior year undergraduate student pursuing Bachelor of Technology in Computer Science and Engineering at IIT Kanpur.'
-  desc2: 'Last summer, I interned at Microsoft Research, Bangalore with the Machine Learning group working on anomaly detection.'
-  desc3: 'Previously I was a Research Fellow at Max Planck Institute for Informatics, Saarbrucken. I enjoy designing algorithms for challenging problems in Artificial Intelligence, Machine Learning, Natural Language Processing and Computer Vision.'
-
+  desc1: 'I am a second year Masters student in the Computer Science department at University of Illinois at Urbana-Champaign (UIUC).'
+  desc3: 'I completed my bachelors in Computer Science and Engineering from IIT Kanpur, India in 2017. I enjoy designing algorithms for challenging problems in Machine Learning, Natural Language Processing and Computer Vision.'
 # Build settings
 encoding: "utf-8"
 

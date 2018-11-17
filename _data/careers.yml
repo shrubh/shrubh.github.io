@@ -3,7 +3,49 @@
     detail: Graduation
     i18n: college
   desc:
-    detail: I am a senior year undergraduate student pursuing Computer Science & Engineering.
+    detail: MS in CS. Advisor- Prof. David Forsyth
+    i18n: college_des
+  date:
+    detail: May 2019
+    i18n: college_date
+  job:
+    detail: University of Illinois at Urbana-Champaign (UIUC)
+    i18n: college_job
+  icon: fa-graduation-cap
+
+- name:
+    detail: Language modelling
+    i18n: intern_2018
+  desc:
+    detail: Internship
+    i18n: intern_2018_des
+  date:
+    detail: May 2018 - Jul 2018
+    i18n: intern_2018_date
+  job:
+    detail: Siri Speech, Apple
+    i18n: intern_2018_job
+  icon: fa-th-large
+
+- name:
+    detail: Anonymity Guarantees in Cryptocurrency Networks
+    i18n: ra_2017
+  desc:
+    detail: Research Assistant
+    i18n: ra_2017_des
+  date:
+    detail: Aug 2017 - Dec 2017
+    i18n: ra_2017_date
+  job:
+    detail: UIUC
+    i18n: ra_2017_job
+  icon: fa-th-large
+
+- name:
+    detail: Graduation
+    i18n: college
+  desc:
+    detail: Bachelor of Technology in Computer Science and Engineering
     i18n: college_des
   date:
     detail: Jun 2017
@@ -17,7 +59,7 @@
     detail: Anomaly Detection in Internet of Things (IoT) Datasets
     i18n: intern_2016
   desc:
-    detail: Internship - Proposed a bag of features for time-series achieving 85% accuracy in AP and 99% in WARD with model sizes as low as 2 KB
+    detail: Internship
     i18n: intern_2016_des
   date:
     detail: Jun 2016 - Jul 2016
@@ -31,7 +73,7 @@
     detail: Advanced Algorithmic Techniques
     i18n: intern_2015
   desc:
-    detail: Internship - Brought forth a partial solution to the Maximum Edge 2-Coloring problem using a variant of Tree Decomposition and Gained a closer insight into the world of algorithms and acquired knowledge of advanced techniques
+    detail: Internship
     i18n: intern_2015_des
   date:
     detail: May 2015 - Jul 2015
@@ -48,17 +90,6 @@
     detail: 2013
     i18n: intern_2016_date
   job:
-    detail: Delhi Public School, Kanpur
-    i18n: intern_2016_job
-  icon: fa-book
-
-- name:
-    detail: CBSE (Class X)
-    i18n: intern_2016
-  date:
-    detail: 2011
-    i18n: intern_2016_date
-  job:
-    detail: Delhi Public School, Kanpur
+    detail: Delhi Public School, Kalyanpur, Kanpur
     i18n: intern_2016_job
   icon: fa-book
