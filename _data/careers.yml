@@ -1,9 +1,9 @@
 # careers section data
 - name:
-    detail: Graduation
+    detail: Masters
     i18n: college
   desc:
-    detail: MS in CS. Advisor- Prof. David Forsyth
+    detail: Masters with thesis in Computer Science. Advisor- Prof. David Forsyth
     i18n: college_des
   date:
     detail: May 2019
@@ -42,7 +42,7 @@
   icon: fa-th-large
 
 - name:
-    detail: Graduation
+    detail: Bachelors
     i18n: college
   desc:
     detail: Bachelor of Technology in Computer Science and Engineering
