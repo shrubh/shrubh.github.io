@@ -31,7 +31,7 @@
     detail: Anonymity Guarantees in Cryptocurrency Networks
     i18n: ra_2017
   desc:
-    detail: Research Assistant
+    detail: Research Assistant  - "Dandelion++, Lightweight Cryptocurrency Networking with Formal Anonymity Guarantees", Sigmetrics ’18
     i18n: ra_2017_des
   date:
     detail: Aug 2017 - Dec 2017
@@ -65,7 +65,7 @@
     detail: Jun 2016 - Jul 2016
     i18n: intern_2016_date
   job:
-    detail: Microsoft Research (MSR), Bangalore
+    detail: Microsoft Research, Bangalore
     i18n: intern_2016_job
   icon: fa-th-large
 
