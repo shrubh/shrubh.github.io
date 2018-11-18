@@ -15,7 +15,7 @@
   i18n: 'nav.skills'
   name: 'Skills'
   tpl: 'skills.html'
-  css: 'team'
+  css: ''
 
 - id: 'projects'
   i18n: 'nav.projects'
