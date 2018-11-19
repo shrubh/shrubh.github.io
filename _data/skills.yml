@@ -1,28 +1,2 @@
 # skills section data
-- name: 'C/C++'
-  
-
-- name: 'Python'
- 
-
-- name: 'Java'
-  
-
-- name: 'HTML'
- 
-
-- name: 'PHP'
-
-- name: 'SQL'
-
-- name: 'MongoDB'
-
-- name: 'Django'
-
-- name: 'Verilog'
-
-- name: 'Agda'
-
-- name: 'MATLAB'
-
-- name: 'LaTeX'
+- name: 'C/C++, Python, Java, HTML, PHP, SQL, MongoDB, Django, Verilog, Agda, MATLAB, LaTeX'
