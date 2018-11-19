@@ -1,36 +1,28 @@
 # skills section data
 - name: 'C/C++'
-  percentage: 85
+  
 
 - name: 'Python'
-  percentage: 65
+ 
 
 - name: 'Java'
-  percentage: 75
+  
 
 - name: 'HTML'
-  percentage: 85
+ 
 
 - name: 'PHP'
-  percentage: 80
 
 - name: 'SQL'
-  percentage: 70
 
 - name: 'MongoDB'
-  percentage: 65
 
 - name: 'Django'
-  percentage: 50
 
 - name: 'Verilog'
-  percentage: 40
 
 - name: 'Agda'
-  percentage: 10
 
 - name: 'MATLAB'
-  percentage: 20
 
 - name: 'LaTeX'
-  percentage: 100
