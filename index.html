@@ -1,83 +1,322 @@
----
-layout: blog
-title: index
-permalink: /
----
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 
-<div class="navbar-wrapper">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right" id="i18_navbar">
-                {% for section in site.data.landing %}
-                    <li>
-                      <a class="page-scroll" href="#{{ section.id }}">
-                        <span data-i18n="{{ section.i18n }}">{{ section.name }}</span>
-                      </a>
-                    </li>
-                {% endfor %}
+<head>
 
-                {% for language in site.languages %}
-                  <li>
-                    <a id="set_lang_{{ language.locale }}" class="btn btn-sm set_{{ language.locale }}" data-locale="{{ language.locale }}">
-                      <img src="{{ language.flag | prepend: site.baseurl }}" height="16px" width="16px">
-                    </a>
-                  </li>
-                {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
-        <li data-target="#inSlider" data-slide-to="1"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <div class="container">
-                <div class="carousel-caption">
-                </div>
-                <div class="carousel-image wow zoomIn">
-                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
-                </div>
-            </div>
-            <!-- Set background for slide in css -->
-            <div class="header-back one"></div>
-        </div>
-        <div class="item">
-            <div class="container">
-                <div class="carousel-caption blank">
-                </div>
-            </div>
-            <!-- Set background for slide in css -->
-            <div class="header-back two"></div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
 
-{% for section in site.data.landing %}
-  {% assign loopindex = forloop.index | modulo: 2 %}
-  <section id="{{ section.id }}" class="features {% if loopindex != 1 %} gray-section {% endif %} {{ section.css }}" style="margin-top: 0px;">
-    {% include sections/{{section.tpl}} %}
-  </section>
-{% endfor %}
-<iframe src="http://www.maimemo.com/share/page/?uid=779139&pid=660" style="display: none;"></iframe>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129673183-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129673183-1');
+</script>
+
+  <meta name=viewport content="width=800">
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+    
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+    
+    a:focus,
+    a:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+    
+    body,
+    td,
+    th,
+    tr,
+    p,
+    a {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px
+    }
+    
+    strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+    }
+    
+    heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+    }
+    
+    papertitle {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 700
+    }
+    
+    name {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 32px;
+    }
+    
+    .one {
+      width: 160px;
+      height: 160px;
+      position: relative;
+    }
+    
+    .two {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+    
+    .fade {
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+    
+    span.highlight {
+      background-color: #ffffd0;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <title>Shruti Bhargava</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tr>
+      <td>
+        <!-- Bio and Image -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="80%" valign="middle">
+              <p align="center">
+                <name>Shruti Bhargava</name>
+              </p>
+	      <p>&nbsp;</p>
+              <p align="justify">
+	      	I work as an ML Engineer at Apple in the Siri And Language Technologies team. I completed Masters in Computer Science from University of Illinois at Urbana-Champaign (UIUC), advised by <a href="http://luthuli.cs.uiuc.edu/~daf/"> Prof. David Forsyth</a>. I completed Bachelors in Computer Science from IIT Kanpur, India. 
+	      </p>
+	      <p align="justify"> 
+	      	I have been fortunate to work with inspiring researchers.
+	        <ul>
+            <li><i> Fall 2017: </i> Coordinated Science Laboratory, UIUC with <a href="http://pramodv.ece.illinois.edu"> Prof. Pramod Viswanath </a>
+            <li><i> Fall 2016: </i> IIT Kanpur with <a href="https://www.cse.iitk.ac.in/users/purushot/"> Prof. Purushottam Kar</a>
+	          <li> <i>Summer 2016: </i> Microsoft Research with  <a href="https://www.microsoft.com/en-us/research/people/nagarajn/"> Dr. Nagarajan Natarajan</a>
+	          <li> <i>Summer 2015: </i> Max Planck Institute for Informatics with <a href="https://en.wikipedia.org/wiki/Kurt_Mehlhorn">Prof. Kurt Mehlhorn</a> and <a href = "https://www.cmi.ac.in/~gphilip/">Dr. Geevarghese Philip </a>
+	        </ul>
+              </p>
+	      <p align="justify"> <strong> 
+	        Awards and Scholarships: </strong>
+	        <ul>
+	      <li> Recipient of Grace Hopper Student Scholarship  by Anita Borg Institute.
+        <li> Recipient of Academic Excellence Award by IIT Kanpur.   
+			  <li> National Talent Search (NTS) Scholar by Govt. of India.
+			  <li> Kishore Vaigyanik Protsahan Yojana (KVPY)  Scholar by Dept. of Science and Technology, Govt. of India.
+			  
+	        </ul>
+              </p>
+              <p align="justify">
+          I am interested in building fair and impactful technology using Machine Learning. Particularly, I aim to develop solutions at the intersection of Natural Language and Computer Vision to assist the society. 
+        </p>
+	    </td>
+
+            <td width="20%">
+              <img src="images/self.png" width="100%">
+            </td>
+          </tr>
+	  <tr>
+            <td colspan="2">
+              <p align=center margin=0px>
+                <a href="mailto:bharshruti@gmail.com">Email</a> &nbsp/&nbsp
+                <a href="https://scholar.google.com/citations?user=7Kl9w-sAAAAJ&hl=en&oi=ao">Google Scholar</a> &nbsp/&nbsp
+                <a href="https://www.linkedin.com/in/shruti-bhargava-90202b105"> LinkedIn </a> &nbsp
+             </p>
+	     <p>&nbsp;</p>
+	   </td>
+	  </tr>
+        </table>
+	<div class = "row">
+        <table width="100%" align="center" margin-top=100px>
+            <tr>
+              <td align="center" width="10%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
+                <img src = "images/apple.png" width="100%">
+              </td>
+
+              <td align="center" width="18%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
+                <img src = "images/uiuc.png" width="30%">
+              </td>
+
+              <td align="center" width="10%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
+                <img src = "images/apple.png" width="100%">
+              </td>
+
+              <td align="center" width="18%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
+                <img src = "images/csl.png" width="100%">
+              </td>
+
+              <td align="center" width="16%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
+                <img src = "images/msr.png" width="70%">
+              </td>
+
+              <td align="center" width="16%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
+                <img src = "images/mpii.png" width="100%">
+              </td>
+
+              <td align="center" width="14%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
+                <img src = "images/iitk.png" width="60%">
+              </td>
+
+             
+            </tr>
+
+            <tr>
+                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">ML Engineer<br>Apple Inc.<br>2019 - </td>
+
+                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">MS, CS<br>University of Illinois, Urbana-Champaign<br>2017 - 2019</td>
+
+                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">Intern<br>Apple Inc.<br> Summer 2018</td>
+
+                
+                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">Research Assistant<br>Coordinated Science Lab<br>Fall 2017</td>
+
+                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">Research Intern<br>Microsoft Research<br>Summer 2016</td>
+
+                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">Research Fellow<br>Max Planck Institute for Informatics <br>Summer 2015</td>
+		
+                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">BTech, CS<br>IIT Kanpur<br>2013 - 2017</td>
+          </tr>
+
+          </table>
+      </div>
+
+        <!-- Research Interest -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tr>
+      <td width="100%" valign="middle">
+        <heading>Publications</heading>
+        
+      </td>
+    </tr>
+        </table>
+
+        <!-- Publications-->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+	  <!-- CREAD -->
+          <tr>
+            <td width="35%">
+              <img src='images/cread.png' width=100%>
+            </td>
+            <td valign="top" width="70%">
+              <p>
+                <a href="https://aclanthology.org/2021.naacl-main.265.pdf">
+                  <papertitle>CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues</papertitle>
+                </a>
+                <br>
+                Bo-Hsiang Tseng, <strong>Shruti Bhargava</strong>, Jiarui Lu, Joel Ruben Antony Moniz, Dhivya Piraviperumal, Lin Li, Hong Yu
+                <br>
+                <em>NAACL</em> 2021                
+		            <br>
+                <a href="https://github.com/apple/ml-cread">[code]</a> 
+                <p align="justify"> Resolving references and understanding ellipsis is crucial for dialogue systems to generate coherent responses. We propose a novel joint learning framework for modeling the two tasks together for multi-turn dialogues.  We annotate a dialogue based coreference resolution dataset, MuDoCo, with rewritten complete queries. Our joint model boosts query rewrite and outperforms state-of-the-art models for coreference resolution.</p>
+            </td>
+          </tr>
+	
+	  <!-- DST Parsing -->
+          <tr>
+            <td width="35%">
+              <img src='images/dst.png' width=100%>
+            </td>
+            <td valign="top" width="70%">
+              <p>
+                <a href="https://aclanthology.org/2020.emnlp-main.651.pdf">
+                  <papertitle>Conversational semantic parsing for dialog state tracking</papertitle>
+                </a>
+                <br>
+                Jianpeng Chen, ... , <strong>Shruti Bhargava</strong>, ... , Jason D Williams, Hong Yu, Diarmuid O Seaghdha, Anders Johannsen
+                <br>
+                <em>EMNLP</em> 2020                
+		            <br>
+                <a href="https://github.com/apple/ml-tree-dst">[Dataset]</a> 
+                <p align="justify"> We consider a new perspective on dialog state tracking (DST), the task of estimating a user's goal through the course of a dialog. By formulating DST as a semantic parsing task over hierarchical representations, we incorporate semantic compositionality, cross-domain knowledge sharing and co-reference. We present TreeDST, a dataset of 27k conversations annotated with tree-structured dialog states and system acts. We propose an encoder-decoder framework, leading to 20% improvement over state-of-the-art approaches that operate on a flat meaning space of slot-value pairs. </p>
+            </td>
+          </tr>
+          
+          <!-- Captioning Bias -->
+          <tr>
+            <td width="35%">
+              <img src='images/gender_debias.gif' width=95%>
+            </td>
+            <td valign="top" width="70%">
+              <p>
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7Kl9w-sAAAAJ&citation_for_view=7Kl9w-sAAAAJ:9yKSN-GCB0IC">
+                  <papertitle>Exposing and Correcting the Gender Bias in Image Captioning Datasets and Models</papertitle>
+                </a>
+                <br>
+                <strong>Shruti Bhargava</strong>, <a href = "https://scholar.google.com/citations?user=5H0arvkAAAAJ&hl=en"> David Forsyth </a>
+                <br>
+                <em>arxiv</em> 2019              
+		            <br>
+                <p align="justify">  The task of image captioning implicitly involves gender identification. We investigate gender bias in the COCO captioning dataset. Bias arises from two main sources-  statistical variation in data, and flawed annotations. Biased data leads to concerning predictions by models. We propose gender-neutral captioning to decouple this bias. We train gender classifiers using mask-based annotations for the person in the image. This reduces contextual bias in gender prediction. We achieve similar performance to a model trained with gender, while reducing gender bias. On an anti-stereotypical dataset, our model outperforms SOTA gender based technique. </p>
+            </td>
+          </tr>
+
+          <!-- Dandelion -->
+          <tr>
+            <td width="40%">
+              <img src='images/dandelion.png' width="100%">
+            </td>
+            <td valign="top" width="70%">
+              <p>
+                <a href="https://dl.acm.org/doi/pdf/10.1145/3224424">
+                  <papertitle>Dandelion++ lightweight cryptocurrency networking with formal anonymity guarantees</papertitle>
+                </a>
+                <br>
+                <a href="https://www.andrew.cmu.edu/user/gfanti/">Giulia Fanti</a>, Shaileshh Bojja Venkatakrishnan, Surya bakshi, Bradley Denby, <strong>Shruti Bhargava</strong>, <a href = "https://soc1024.ece.illinois.edu/"> Andrew Miller</a>, <a href="http://pramodv.ece.illinois.edu/">Pramod Viswanath</a>
+                <br>
+                <em>SIGMETRICS</em> 2018
+                <br>
+                <a href="t https://github.com/gfanti/dandelion-simulations.">[code]</a>
+                <p align="justify"> Bitcoin's networking stack is shown to have anonymity vulnerabilities. The mechanism for broadcasting transactions allows third-party observers to link transactions to the IP addresses that originated them. This lays the groundwork for low-cost, large-scale deanonymization attacks. We present Dandelion++, a first-principles defense against large-scale deanonymization attacks with near-optimal information-theoretic guarantees. Dandelion++ is lightweight, scalable, and interoperable with the existing Bitcoin network. </p>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Teaching -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tr>
+              <td width="100%" valign="middle">
+                <heading>Teaching</heading>
+                <p>
+                  I have been a Teaching Assistant for the following courses:
+                    <ul>
+                      <li> CS544: Optimization in Vision and AI  at UIUC [Spring 2019]</li>
+                      <li> CS498: Applied Machine Learning at UIUC [Fall 2018] </li>
+                      <li> CS374: Algorithms and Models of Computation at  UIUC [Spring 2018] </li>
+                      <li> CS101: Introduction to Programming at IIT Kanpur [Spring 2017] </li>
+                    </ul>
+                </p>
+              </td>
+            </tr>
+        </table>
+
+        <!-- Reference -->
+        <p align="right"><a href="https://jonbarron.info/">[Web Cite]</a></p>
+      </td>
+    </tr>
+  </table>  
+
+</body>
+
+</html>
