@@ -212,6 +212,46 @@
 
         <!-- Publications-->
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+             <!-- SynthDST -->
+          <tr>
+            <td width="35%">
+              <img src='images/dst.gif' width=100%>
+            </td>
+            <td valign="top" width="70%">
+              <p>
+                <a href="https://arxiv.org/abs/2402.02285">
+                  <papertitle>SynthDST: Synthetic Data is All You Need for Few-Shot Dialog State Tracking</papertitle>
+                </a>
+                <br>
+                Atharva Kulkarni, Bo-Hsiang Tseng, Joel Ruben Antony Moniz, Dhivya Piraviperumal, Hong Yu, <strong>Shruti Bhargava</strong>
+                <br>
+                <em>EACL (Oral)</em> 2024
+		            <br>
+                <p align="justify">
+Data generation framework that can efficiently generate synthetic data for dialogue schemas using countable templates. This bridges the gap between zero-shot and training data based few-shot prompting for dialog state tracking with LLMs.
+            </p>
+            </td>
+          </tr>
+             <!-- Context_LLM -->
+          <tr>
+            <td width="35%">
+              <img src='images/context_llm.gif' width=100%>
+            </td>
+            <td valign="top" width="70%">
+              <p>
+                <a href="https://arxiv.org/pdf/2402.00858">
+                  <papertitle>Can Large Language Models Understand Context?</papertitle>
+                </a>
+                <br>
+                Yilun Zhu, Joel Ruben Antony Moniz, <strong>Shruti Bhargava</strong>, Jiarui Lu, Dhivya Piraviperumal, Site Li, Yuan Zhang, Hong Yu, Bo-Hsiang Tseng
+                <br>
+                <em>EACL Findings</em> 2024
+		            <br>
+                <p align="justify">
+A benchmark by adapting four tasks and nine existing datasets, featuring prompts designed to assess the context-understanding abilities of LLMs. In the ICL setting, models struggle with understanding nuanced contextual signals compared to SOTA fine-tuned models. Assessment of quantized models provides promising insights on the 3-bit post-training quantization.
+            </p>
+            </td>
+          </tr>
       <!-- ScreenRef -->
           <tr>
             <td width="35%">
@@ -227,7 +267,9 @@
                 <br>
                 <em>ACL Industry Track</em> 2023
 		            <br>
-                <p align="justify"> Voice assistants help users make phone calls, navigate, and do a lot more. However, assistants have limited capacity to understand their users' context. Our work dives into a new experience for users to refer to data detectable entities on their phone screens. We focus on reference understanding, which is particularly interesting when, similar to visual grounding, there are multiple similar texts on screen. We collect a dataset and propose a lightweight general purpose model that relies on the text extracted from the UI, since consuming pixels is expensive. Our model is modular, offering flexibility, better interpretability and efficient run time memory.</p>
+                <p align="justify">
+Novel experience for users to refer to data-detectable entities on their phone screens when interacting with voice assistants. Screen reference resolution data strategy and a lightweight, general-purpose model that only uses the text extracted from the UI. The proposed model is modular, offering flexibility, better interpretability, and efficient run-time performance.
+            </p>
             </td>
           </tr>
 	  <!-- CREAD -->
@@ -246,10 +288,8 @@
                 <em>NAACL</em> 2021                
 		            <br>
                 <a href="https://github.com/apple/ml-cread">[code]</a> 
-                <p align="justify"> Resolving references and understanding ellipsis is crucial for dialogue systems to generate coherent responses. We propose a novel joint learning framework for modeling the two tasks together for multi-turn dialogues.  We annotate a dialogue based coreference resolution dataset, MuDoCo, with rewritten complete queries. Our joint model boosts query rewrite and outperforms state-of-the-art models for coreference resolution.</p>
-            </td>
-          </tr>
-	
+                <p align="justify">
+Resolving references and understanding ellipses are crucial for dialogue agents to generate coherent responses. A joint benchmark for the two tasks by annotating the dialogue-based coreference dataset, MuDoCo, with rewritten queries. A novel joint learning framework that boosts query rewrite and outperforms SOTA for coreference resolution.
 	  <!-- DST Parsing -->
           <tr>
             <td width="35%">
@@ -266,7 +306,9 @@
                 <em>EMNLP</em> 2020                
 		            <br>
                 <a href="https://github.com/apple/ml-tree-dst">[Dataset]</a> 
-                <p align="justify"> We consider a new perspective on dialog state tracking (DST), the task of estimating a user's goal through the course of a dialog. By formulating DST as a semantic parsing task over hierarchical representations, we incorporate semantic compositionality, cross-domain knowledge sharing and co-reference. We present TreeDST, a dataset of 27k conversations annotated with tree-structured dialog states and system acts. We propose an encoder-decoder framework, leading to 20% improvement over state-of-the-art approaches that operate on a flat meaning space of slot-value pairs. </p>
+                <p align="justify">
+Fresh perspective on dialog state tracking as a semantic parsing task over hierarchical representations, with compositionality, cross-domain knowledge sharing, and coreference. We present TreeDST, a dataset of 27k conversations with tree-structured states and system acts. Our encoder-decoder model leads to a 20% improvement over SOTA.
+            </p>
             </td>
           </tr>
           
@@ -285,7 +327,10 @@
                 <br>
                 <em>arxiv</em> 2019              
 		            <br>
-                <p align="justify">  The task of image captioning implicitly involves gender identification. We investigate gender bias in the COCO captioning dataset. Bias arises from two main sources-  statistical variation in data, and flawed annotations. Biased data leads to concerning predictions by models. We propose gender-neutral captioning to decouple this bias. We train gender classifiers using mask-based annotations for the person in the image. This reduces contextual bias in gender prediction. We achieve similar performance to a model trained with gender, while reducing gender bias. On an anti-stereotypical dataset, our model outperforms SOTA gender based technique. </p>
+                <p align="justify">
+The task of image captioning implicitly involves gender identification. MS COCO dataset contains blatant gender bias in captions, arising from two main sources: statistical variation in data and flawed annotations. Biased data leads to concerning predictions by models. We propose a novel framework for gender-neutral captioning and independent gender classification using masking, reducing contextual bias. On an anti-stereotypical dataset, our approach outperforms the SOTA gender-based approaches.
+
+            </p>
             </td>
           </tr>
 
@@ -305,7 +350,8 @@
                 <em>SIGMETRICS</em> 2018
                 <br>
                 <a href="t https://github.com/gfanti/dandelion-simulations.">[code]</a>
-                <p align="justify"> Bitcoin's networking stack is shown to have anonymity vulnerabilities. The mechanism for broadcasting transactions allows third-party observers to link transactions to the IP addresses that originated them. This lays the groundwork for low-cost, large-scale deanonymization attacks. We present Dandelion++, a first-principles defense against large-scale deanonymization attacks with near-optimal information-theoretic guarantees. Dandelion++ is lightweight, scalable, and interoperable with the existing Bitcoin network. </p>
+                <p align="justify">
+Bitcoin's networking stack is shown to have anonymity vulnerabilities owing to the mechanism for broadcasting transactions, leading to large-scale deanonymization attacks. We present Dandelion++, a first-principles defense with near-optimal information-theoretic guarantees.            </p>
             </td>
           </tr>
         </table>
