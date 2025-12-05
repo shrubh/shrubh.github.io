@@ -1,11 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shruti Bhargava - Conversational AI at Apple in Siri Core Modeling, Computer Science researcher specializing in Natural Language Processing and Machine Learning">
+  <meta name="author" content="Shruti Bhargava">
 
 
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129673183-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -15,371 +18,835 @@
   gtag('config', 'UA-129673183-1');
 </script>
 
-  <meta name=viewport content="width=800">
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
   <style type="text/css">
-    /* Color scheme stolen from Sergey Karayev */
-    
+    /* =============== RESPONSIVE DESIGN =============== */
+
+    /* CSS Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #2c3e50;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      min-height: 100vh;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    /* Typography */
+    .name {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: clamp(28px, 5vw, 36px);
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 20px 0;
+      background: linear-gradient(135deg, #1772d0 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: clamp(20px, 4vw, 24px);
+      font-weight: 700;
+      margin: 40px 0 25px 0;
+      color: #1e293b;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .heading::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #1772d0, #f09228);
+      border-radius: 2px;
+    }
+
+    .papertitle {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* Enhanced Typography */
+    p {
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    strong {
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    /* Links */
     a {
       color: #1772d0;
       text-decoration: none;
+      transition: all 0.3s ease;
     }
-    
-    a:focus,
-    a:hover {
+
+    /* General hover for most links */
+    a:hover, a:focus {
+      color: #f09228;
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    /* Contact Links Container */
+    .contact-links {
+      text-align: center;
+      margin: 20px 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Specific contact link styling - higher specificity */
+    .contact-links a {
+      color: #1772d0;
+      margin: 0 20px;
+      white-space: nowrap;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      transform: none;
+      text-decoration: none;
+    }
+
+    .contact-links a:hover,
+    .contact-links a:focus {
+      background: rgba(23, 114, 208, 0.1);
+      transform: translateY(-2px);
       color: #f09228;
       text-decoration: none;
     }
-    
-    body,
-    td,
-    th,
-    tr,
-    p,
-    a {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 16px
+
+    .papertitle a {
+      color: #1772d0;
     }
-    
-    strong {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 16px;
+
+    .papertitle a:hover {
+      color: #f09228;
     }
-    
-    heading {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 22px;
+
+    /* Layout Sections */
+    .section {
+      margin-bottom: 35px;
+      padding: 25px;
+      background: #fafbfc;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
     }
-    
-    papertitle {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 16px;
-      font-weight: 700
+
+    .section:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
     }
-    
-    name {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 32px;
+
+    /* Hero Section - Bio */
+    .hero-section {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 35px;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
     }
-    
-    .one {
-      width: 160px;
+
+    .bio-content {
+      grid-column: 1;
+    }
+
+    .profile-image {
+      grid-column: 2;
+      width: 280px;
+      max-width: 100%;
+      align-self: center;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      transition: all 0.4s ease;
+      border: 4px solid white;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+
+    .profile-image img:hover {
+      transform: scale(1.02) rotate(1deg);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline-section {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      border-radius: 16px;
+      padding: 30px;
+      margin: 25px 0;
+      color: #2c3e50;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      border: none;
+    }
+
+    .timeline-logos {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+      align-items: stretch;
+      justify-items: center;
+    }
+
+    .timeline-item {
+      text-align: center;
+      background: white;
+      padding: 20px 12px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      border: none;
+      width: 100%;
+      max-width: 140px;
       height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-8px);
+      background: #fafbfc;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-item img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      max-width: 100%;
+      margin: 0 auto 12px auto;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .timeline-text {
+      font-size: 12px;
+      line-height: 1.4;
+      color: #475569;
+      font-weight: 500;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Publications Grid */
+    .publications {
+      display: grid;
+      gap: 35px;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 25px;
+      align-items: start;
+      padding: 25px;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      background: white;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .publication:hover {
+      border-color: #1772d0;
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(23, 114, 208, 0.15);
+    }
+
+    .publication-image {
+      width: 100%;
+      max-width: 280px;
       position: relative;
+      overflow: hidden;
+      border-radius: 8px;
     }
-    
-    .two {
-      width: 160px;
-      height: 160px;
-      position: absolute;
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
+
+    .publication-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: all 0.4s ease;
     }
-    
-    .fade {
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
+
+    .publication-image:hover img {
+      transform: scale(1.08);
     }
-    
-    span.highlight {
-      background-color: #ffffd0;
+
+    .publication-content {
+      min-width: 0;
+    }
+
+    .publication-content p {
+      margin: 0 0 12px 0;
+      text-align: justify;
+    }
+
+    /* Enhanced Lists */
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    li::marker {
+      color: #1772d0;
+    }
+
+    /* Utility Classes */
+    .highlight {
+      background: linear-gradient(135deg, #fef3cd 0%, #fde68a 100%);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* =============== RESPONSIVE BREAKPOINTS =============== */
+
+    /* Tablet Styles (768px and down) */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 0;
+        border-radius: 12px;
+        margin: 10px;
+      }
+
+      /* Hero Section - Stack vertically */
+      .hero-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .bio-content {
+        grid-column: 1;
+      }
+
+      .profile-image {
+        grid-column: 1;
+        width: 200px;
+        margin: 0 auto;
+      }
+
+      /* Timeline - Fewer columns */
+      .timeline-logos {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
+      }
+
+      .timeline-item {
+        padding: 15px 10px;
+      }
+
+      .timeline-item img {
+        width: 60px;
+      }
+
+      /* Publications - Stack vertically */
+      .publication {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .publication-image {
+        max-width: 250px;
+        margin: 0 auto;
+      }
+
+      .publication-content {
+        text-align: left;
+      }
+
+      .section {
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      /* Contact Links */
+      .contact-links {
+        line-height: 2;
+        padding: 20px;
+      }
+
+      .contact-links a {
+        display: inline-block;
+        margin: 8px 10px;
+      }
+    }
+
+    /* Mobile Styles (480px and down) */
+    @media screen and (max-width: 480px) {
+      body {
+        padding: 5px;
+        font-size: 15px;
+      }
+
+      .container {
+        margin: 5px;
+        border-radius: 8px;
+      }
+
+      .name {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .heading {
+        font-size: 18px;
+        margin: 25px 0 15px 0;
+      }
+
+      .hero-section {
+        padding: 20px 15px;
+      }
+
+      /* Timeline - Single column on very small screens */
+      .timeline-logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .timeline-section {
+        padding: 25px 15px;
+      }
+
+      .timeline-item {
+        padding: 12px 8px;
+      }
+
+      .timeline-item img {
+        width: 45px;
+      }
+
+      .timeline-text {
+        font-size: 12px;
+      }
+
+      /* Publications */
+      .publication {
+        padding: 15px;
+      }
+
+      .publication-image {
+        max-width: 200px;
+      }
+
+      .section {
+        padding: 15px;
+        margin-bottom: 25px;
+      }
+
+      /* Contact Links - Stack vertically */
+      .contact-links a {
+        display: block;
+        margin: 8px 0;
+        padding: 12px 20px;
+      }
+
+      /* Reduce spacing */
+      .timeline-section {
+        margin: 30px 0;
+      }
+    }
+
+    /* Large Desktop (1200px and up) */
+    @media screen and (min-width: 1200px) {
+      .timeline-logos {
+        grid-template-columns: repeat(7, 1fr);
+      }
+
+      .container {
+        padding: 0 40px;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+      }
+
+      .container {
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .contact-links {
+        display: none;
+      }
+
+      .publication-image {
+        max-width: 150px;
+      }
+
+      body {
+        font-size: 12px;
+        padding: 0;
+      }
+
+      .section {
+        break-inside: avoid;
+      }
     }
   </style>
   <title>Shruti Bhargava</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-  <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-      <td>
-        <!-- Bio and Image -->
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="80%" valign="middle">
-              <p align="center">
-                <name>Shruti Bhargava</name>
-              </p>
-	      <p>&nbsp;</p>
-              <p align="justify">
-	      	I work as an ML Engineer at Apple in the Siri And Language Technologies team. I completed Masters in Computer Science from University of Illinois at Urbana-Champaign (UIUC), advised by <a href="http://luthuli.cs.uiuc.edu/~daf/"> Prof. David Forsyth</a>. I completed Bachelors in Computer Science from IIT Kanpur, India. 
-	      </p>
-	      <p align="justify"> 
-	      	I have been fortunate to work with inspiring researchers.
-	        <ul>
-            <li><i> Fall 2017: </i> Coordinated Science Laboratory, UIUC with <a href="http://pramodv.ece.illinois.edu"> Prof. Pramod Viswanath </a>
-            <li><i> Fall 2016: </i> IIT Kanpur with <a href="https://www.cse.iitk.ac.in/users/purushot/"> Prof. Purushottam Kar</a>
-	          <li> <i>Summer 2016: </i> Microsoft Research with  <a href="https://www.microsoft.com/en-us/research/people/nagarajn/"> Dr. Nagarajan Natarajan</a>
-	          <li> <i>Summer 2015: </i> Max Planck Institute for Informatics with <a href="https://en.wikipedia.org/wiki/Kurt_Mehlhorn">Prof. Kurt Mehlhorn</a> and <a href = "https://www.cmi.ac.in/~gphilip/">Dr. Geevarghese Philip </a>
-	        </ul>
-              </p>
-	      <p align="justify"> <strong> 
-	        Awards and Scholarships: </strong>
-	        <ul>
-	      <li> Recipient of Grace Hopper Student Scholarship  by Anita Borg Institute.
-        <li> Recipient of Academic Excellence Award by IIT Kanpur.   
-			  <li> National Talent Search (NTS) Scholar by Govt. of India.
-			  <li> Kishore Vaigyanik Protsahan Yojana (KVPY)  Scholar by Dept. of Science and Technology, Govt. of India.
-			  
-	        </ul>
-              </p>
-              <p align="justify">
-          I am interested in building fair and impactful solutions using Machine Learning. Particularly, I aim to develop technology at the intersection of Natural Language and Computer Vision to assist the society. 
+  <div class="container">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="bio-content">
+        <h1 class="name">Shruti Bhargava</h1>
+        <p>&nbsp;</p>
+        <p>
+          I am a Senior ML Engineer working on conversational AI in Apple's Siri Core Modeling team, where I develop advanced language understanding systems and LLM response strategies. I completed my Masters in Computer Science from the University of Illinois at Urbana-Champaign (UIUC), advised by <a href="http://luthuli.cs.uiuc.edu/~daf/">Prof. David Forsyth</a>, and my Bachelors from IIT Kanpur, India.
         </p>
-	    </td>
-
-            <td width="20%">
-              <img src="images/self.png" width="100%">
-            </td>
-          </tr>
-	  <tr>
-            <td colspan="2">
-              <p align=center margin=0px>
-                <a href="mailto:bharshruti@gmail.com">Email</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?user=7Kl9w-sAAAAJ&hl=en&oi=ao">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/shruti-bhargava-90202b105"> LinkedIn </a> &nbsp
-             </p>
-	     <p>&nbsp;</p>
-	   </td>
-	  </tr>
-        </table>
-	<div class = "row">
-        <table width="100%" align="center" margin-top=100px>
-            <tr>
-              <td align="center" width="10%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-                <img src = "images/apple.png" width="100%">
-              </td>
-
-              <td align="center" width="18%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-                <img src = "images/uiuc.png" width="30%">
-              </td>
-
-              <td align="center" width="10%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-                <img src = "images/apple.png" width="100%">
-              </td>
-
-              <td align="center" width="18%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-                <img src = "images/csl.png" width="100%">
-              </td>
-
-              <td align="center" width="16%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-                <img src = "images/msr.png" width="70%">
-              </td>
-
-              <td align="center" width="16%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-                <img src = "images/mpii.png" width="100%">
-              </td>
-
-              <td align="center" width="14%" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-                <img src = "images/iitk.png" width="60%">
-              </td>
-
-             
-            </tr>
-
-            <tr>
-                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">ML Engineer<br>Apple Inc.<br>2019 - </td>
-
-                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">MS, CS<br>University of Illinois, Urbana-Champaign<br>2017 - 2019</td>
-
-                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">Intern<br>Apple Inc.<br> Summer 2018</td>
-
-                
-                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">Research Assistant<br>Coordinated Science Lab<br>Fall 2017</td>
-
-                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">Research Intern<br>Microsoft Research<br>Summer 2016</td>
-
-                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">Research Fellow<br>Max Planck Institute for Informatics <br>Summer 2015</td>
-		
-                <td align="center" style = "vertical-align: middle; background-color: rgba(255, 255, 255, 1); font-size: 14px">BTech, CS<br>IIT Kanpur<br>2013 - 2017</td>
-          </tr>
-
-          </table>
+        <p>
+          Throughout my career, I have been fortunate to collaborate with inspiring researchers across leading institutions.
+        </p>
+        <ul>
+          <li><i>Fall 2017:</i> Coordinated Science Laboratory, UIUC with <a href="http://pramodv.ece.illinois.edu">Prof. Pramod Viswanath</a></li>
+          <li><i>Fall 2016:</i> IIT Kanpur with <a href="https://www.cse.iitk.ac.in/users/purushot/">Prof. Purushottam Kar</a></li>
+          <li><i>Summer 2016:</i> Microsoft Research with <a href="https://www.microsoft.com/en-us/research/people/nagarajn/">Dr. Nagarajan Natarajan</a></li>
+          <li><i>Summer 2015:</i> Max Planck Institute for Informatics with <a href="https://en.wikipedia.org/wiki/Kurt_Mehlhorn">Prof. Kurt Mehlhorn</a> and <a href="https://www.cmi.ac.in/~gphilip/">Dr. Geevarghese Philip</a></li>
+        </ul>
       </div>
 
-        <!-- Research Interest -->
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr>
-      <td width="100%" valign="middle">
-        <heading>Publications</heading>
-        
-      </td>
-    </tr>
-        </table>
+      <div class="profile-image">
+        <img src="images/self.png" alt="Shruti Bhargava Profile Photo">
+      </div>
+    </section>
 
-        <!-- Publications-->
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-             <!-- SynthDST -->
-          <tr>
-            <td width="35%">
-              <img src='images/dst.gif' width=100%>
-            </td>
-            <td valign="top" width="70%">
-              <p>
-                <a href="https://arxiv.org/abs/2402.02285">
-                  <papertitle>SynthDST: Synthetic Data is All You Need for Few-Shot Dialog State Tracking</papertitle>
-                </a>
-                <br>
-                Atharva Kulkarni, Bo-Hsiang Tseng, Joel Ruben Antony Moniz, Dhivya Piraviperumal, Hong Yu, <strong>Shruti Bhargava</strong>
-                <br>
-                <em>EACL (Oral)</em> 2024
-		            <br>
-                <p align="justify">
-Data generation framework that can efficiently generate synthetic data for dialogue schemas using countable templates. This bridges the gap between zero-shot and training data based few-shot prompting for dialog state tracking with LLMs.
+    <!-- Contact Links -->
+    <div class="contact-links">
+      <a href="mailto:bharshruti@gmail.com">Email</a> &nbsp;/&nbsp;
+      <a href="https://scholar.google.com/citations?user=7Kl9w-sAAAAJ&hl=en&oi=ao">Google Scholar</a> &nbsp;/&nbsp;
+      <a href="https://www.linkedin.com/in/shruti-bhargava-90202b105">LinkedIn</a>
+    </div>
+
+    <!-- Career Timeline -->
+    <section class="timeline-section">
+      <div class="timeline-logos">
+        <div class="timeline-item">
+          <img src="images/apple.png" alt="Apple Inc.">
+          <div class="timeline-text">Senior ML Engineer<br>Apple Inc.<br>2019 - Present</div>
+        </div>
+
+        <div class="timeline-item">
+          <img src="images/uiuc.png" alt="University of Illinois">
+          <div class="timeline-text">MS, CS<br>UIUC<br>2017 - 2019</div>
+        </div>
+
+        <div class="timeline-item">
+          <img src="images/apple.png" alt="Apple Inc. Internship">
+          <div class="timeline-text">Intern<br>Apple Inc.<br>2018 Summer</div>
+        </div>
+
+        <div class="timeline-item">
+          <img src="images/csl.png" alt="Coordinated Science Laboratory">
+          <div class="timeline-text">Research Assistant<br>CSL<br>2017 Fall</div>
+        </div>
+
+        <div class="timeline-item">
+          <img src="images/msr.png" alt="Microsoft Research">
+          <div class="timeline-text">Research Intern<br>Microsoft Research<br>2016 Summer</div>
+        </div>
+
+        <div class="timeline-item">
+          <img src="images/mpii.png" alt="Max Planck Institute">
+          <div class="timeline-text">Research Fellow<br>Max Planck Institute<br>2015 Summer</div>
+        </div>
+
+        <div class="timeline-item">
+          <img src="images/iitk.png" alt="IIT Kanpur">
+          <div class="timeline-text">BTech, CS<br>IIT Kanpur<br>2013 - 2017</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patents Section -->
+    <section class="section">
+      <h2 class="heading">Patents</h2>
+      <ul>
+        <li><strong>Digital Assistant Reference Resolution</strong> - US Patent<br>
+            <em>H Yu, S Adya, <strong>S Bhargava</strong>, M Lukens, J Cheng, L Li, A Patel, D Piraviperumal, SG Pulman</em></li>
+        <li><strong>Digital Assistant Intelligence Engine</strong> - US Patent Application<br>
+            <em>A Aggarwal, C Sumanth, CS O'Mara, H Yu, KM Daryanani, LN Perkins, NL Tzou, N Rajshree, S Kohli, <strong>S Bhargava</strong></em></li>
+        <li><strong>Virtual Object Placement Based on Referential Expressions</strong> - US Patent Application<br>
+            <em>A Patel, S Adya, <strong>S Bhargava</strong>, A Blechschmidt, V Nair, A Polichroniadis, K Sandridge, D Ulbricht, H Yu</em></li>
+      </ul>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section">
+      <h2 class="heading">Publications</h2>
+
+      <div class="publications">
+        <!-- SynthDST -->
+        <div class="publication">
+          <div class="publication-image">
+            <img src="images/dst.gif" alt="SynthDST visualization">
+          </div>
+          <div class="publication-content">
+            <p>
+              <a href="https://arxiv.org/abs/2402.02285" class="papertitle">
+                SynthDST: Synthetic Data is All You Need for Few-Shot Dialog State Tracking
+              </a>
+              <br>
+              Atharva Kulkarni, Bo-Hsiang Tseng, Joel Ruben Antony Moniz, Dhivya Piraviperumal, Hong Yu, <strong>Shruti Bhargava</strong>
+              <br>
+              <em>EACL (Oral)</em> 2024
+              <br>
             </p>
-            </td>
-          </tr>
-             <!-- Context_LLM -->
-          <tr>
-            <td width="35%">
-              <img src='images/context_llm.gif' width=100%>
-            </td>
-            <td valign="top" width="70%">
-              <p>
-                <a href="https://arxiv.org/pdf/2402.00858">
-                  <papertitle>Can Large Language Models Understand Context?</papertitle>
-                </a>
-                <br>
-                Yilun Zhu, Joel Ruben Antony Moniz, <strong>Shruti Bhargava</strong>, Jiarui Lu, Dhivya Piraviperumal, Site Li, Yuan Zhang, Hong Yu, Bo-Hsiang Tseng
-                <br>
-                <em>EACL Findings</em> 2024
-		            <br>
-                <p align="justify">
-A benchmark by adapting four tasks and nine existing datasets, featuring prompts designed to assess the context-understanding abilities of LLMs. In the ICL setting, models struggle with understanding nuanced contextual signals compared to SOTA fine-tuned models. Assessment of quantized models provides promising insights on the 3-bit post-training quantization.
+            <p>
+              Data generation framework that can efficiently generate synthetic data for dialogue schemas using countable templates. This bridges the gap between zero-shot and training data based few-shot prompting for dialog state tracking with LLMs.
             </p>
-            </td>
-          </tr>
-      <!-- ScreenRef -->
-          <tr>
-            <td width="35%">
-              <img src='images/screenref.gif' width=100%>
-            </td>
-            <td valign="top" width="70%">
-              <p>
-                <a href="https://arxiv.org/abs/2306.07298">
-                  <papertitle>Referring to Screen Texts with Voice Assistants</papertitle>
-                </a>
-                <br>
-                <strong>Shruti Bhargava</strong>, Anand Dhoot, Ing-Marie Jonsson, Hoang Long Nguyen, Alkesh Patel, Hong Yu, Vincent Renkens
-                <br>
-                <em>ACL Industry Track</em> 2023
-		            <br>
-                <p align="justify">
-Novel experience for users to refer to data-detectable entities on their phone screens when interacting with voice assistants. Screen reference resolution data strategy and a lightweight, general-purpose model that only uses the text extracted from the UI. The proposed model is modular, offering flexibility, better interpretability, and efficient run-time performance.
+          </div>
+        </div>
+
+        <!-- Context_LLM -->
+        <div class="publication">
+          <div class="publication-image">
+            <img src="images/context_llm.gif" alt="Context LLM visualization">
+          </div>
+          <div class="publication-content">
+            <p>
+              <a href="https://arxiv.org/pdf/2402.00858" class="papertitle">
+                Can Large Language Models Understand Context?
+              </a>
+              <br>
+              Yilun Zhu, Joel Ruben Antony Moniz, <strong>Shruti Bhargava</strong>, Jiarui Lu, Dhivya Piraviperumal, Site Li, Yuan Zhang, Hong Yu, Bo-Hsiang Tseng
+              <br>
+              <em>EACL Findings</em> 2024
+              <br>
             </p>
-            </td>
-          </tr>
-	  <!-- CREAD -->
-          <tr>
-            <td width="35%">
-              <img src='images/cread.png' width=100%>
-            </td>
-            <td valign="top" width="70%">
-              <p>
-                <a href="https://aclanthology.org/2021.naacl-main.265.pdf">
-                  <papertitle>CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues</papertitle>
-                </a>
-                <br>
-                Bo-Hsiang Tseng, <strong>Shruti Bhargava</strong>, Jiarui Lu, Joel Ruben Antony Moniz, Dhivya Piraviperumal, Lin Li, Hong Yu
-                <br>
-                <em>NAACL</em> 2021                
-		            <br>
-                <a href="https://github.com/apple/ml-cread">[code]</a> 
-                <p align="justify">
-Resolving references and understanding ellipses are crucial for dialogue agents to generate coherent responses. A joint benchmark for the two tasks by annotating the dialogue-based coreference dataset, MuDoCo, with rewritten queries. A novel joint learning framework that boosts query rewrite and outperforms SOTA for coreference resolution.
-	  <!-- DST Parsing -->
-          <tr>
-            <td width="35%">
-              <img src='images/dst.png' width=100%>
-            </td>
-            <td valign="top" width="70%">
-              <p>
-                <a href="https://aclanthology.org/2020.emnlp-main.651.pdf">
-                  <papertitle>Conversational semantic parsing for dialog state tracking</papertitle>
-                </a>
-                <br>
-                Jianpeng Chen, ... , <strong>Shruti Bhargava</strong>, ... , Jason D Williams, Hong Yu, Diarmuid O Seaghdha, Anders Johannsen
-                <br>
-                <em>EMNLP</em> 2020                
-		            <br>
-                <a href="https://github.com/apple/ml-tree-dst">[Dataset]</a> 
-                <p align="justify">
-Fresh perspective on dialog state tracking as a semantic parsing task over hierarchical representations, with compositionality, cross-domain knowledge sharing, and coreference. We present TreeDST, a dataset of 27k conversations with tree-structured states and system acts. Our encoder-decoder model leads to a 20% improvement over SOTA.
+            <p>
+              A benchmark by adapting four tasks and nine existing datasets, featuring prompts designed to assess the context-understanding abilities of LLMs. In the ICL setting, models struggle with understanding nuanced contextual signals compared to SOTA fine-tuned models. Assessment of quantized models provides promising insights on the 3-bit post-training quantization.
             </p>
-            </td>
-          </tr>
-          
-          <!-- Captioning Bias -->
-          <tr>
-            <td width="35%">
-              <img src='images/gender_debias.gif' width=95%>
-            </td>
-            <td valign="top" width="70%">
-              <p>
-                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7Kl9w-sAAAAJ&citation_for_view=7Kl9w-sAAAAJ:9yKSN-GCB0IC">
-                  <papertitle>Exposing and Correcting the Gender Bias in Image Captioning Datasets and Models</papertitle>
-                </a>
-                <br>
-                <strong>Shruti Bhargava</strong>, <a href = "https://scholar.google.com/citations?user=5H0arvkAAAAJ&hl=en"> David Forsyth </a>
-                <br>
-                <em>arxiv</em> 2019              
-		            <br>
-                <p align="justify">
-The task of image captioning implicitly involves gender identification. MS COCO dataset contains blatant gender bias in captions, arising from two main sources: statistical variation in data and flawed annotations. Biased data leads to concerning predictions by models. We propose a novel framework for gender-neutral captioning and independent gender classification using masking, reducing contextual bias. On an anti-stereotypical dataset, our approach outperforms the SOTA gender-based approaches.
+          </div>
+        </div>
 
+        <!-- ScreenRef -->
+        <div class="publication">
+          <div class="publication-image">
+            <img src="images/screenref.gif" alt="ScreenRef visualization">
+          </div>
+          <div class="publication-content">
+            <p>
+              <a href="https://arxiv.org/abs/2306.07298" class="papertitle">
+                Referring to Screen Texts with Voice Assistants
+              </a>
+              <br>
+              <strong>Shruti Bhargava</strong>, Anand Dhoot, Ing-Marie Jonsson, Hoang Long Nguyen, Alkesh Patel, Hong Yu, Vincent Renkens
+              <br>
+              <em>ACL Industry Track</em> 2023
+              <br>
             </p>
-            </td>
-          </tr>
+            <p>
+              Novel experience for users to refer to data-detectable entities on their phone screens when interacting with voice assistants. Screen reference resolution data strategy and a lightweight, general-purpose model that only uses the text extracted from the UI. The proposed model is modular, offering flexibility, better interpretability, and efficient run-time performance.
+            </p>
+          </div>
+        </div>
 
-          <!-- Dandelion -->
-          <tr>
-            <td width="40%">
-              <img src='images/dandelion.png' width="100%">
-            </td>
-            <td valign="top" width="70%">
-              <p>
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3224424">
-                  <papertitle>Dandelion++ lightweight cryptocurrency networking with formal anonymity guarantees</papertitle>
-                </a>
-                <br>
-                <a href="https://www.andrew.cmu.edu/user/gfanti/">Giulia Fanti</a>, Shaileshh Bojja Venkatakrishnan, Surya bakshi, Bradley Denby, <strong>Shruti Bhargava</strong>, <a href = "https://soc1024.ece.illinois.edu/"> Andrew Miller</a>, <a href="http://pramodv.ece.illinois.edu/">Pramod Viswanath</a>
-                <br>
-                <em>SIGMETRICS</em> 2018
-                <br>
-                <a href="t https://github.com/gfanti/dandelion-simulations.">[code]</a>
-                <p align="justify">
-Bitcoin's networking stack is shown to have anonymity vulnerabilities owing to the mechanism for broadcasting transactions, leading to large-scale deanonymization attacks. We present Dandelion++, a first-principles defense with near-optimal information-theoretic guarantees.            </p>
-            </td>
-          </tr>
-        </table>
+        <!-- CREAD -->
+        <div class="publication">
+          <div class="publication-image">
+            <img src="images/cread.png" alt="CREAD visualization">
+          </div>
+          <div class="publication-content">
+            <p>
+              <a href="https://aclanthology.org/2021.naacl-main.265.pdf" class="papertitle">
+                CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues
+              </a>
+              <br>
+              Bo-Hsiang Tseng, <strong>Shruti Bhargava</strong>, Jiarui Lu, Joel Ruben Antony Moniz, Dhivya Piraviperumal, Lin Li, Hong Yu
+              <br>
+              <em>NAACL</em> 2021
+              <br>
+              <a href="https://github.com/apple/ml-cread">[code]</a>
+            </p>
+            <p>
+              Resolving references and understanding ellipses are crucial for dialogue agents to generate coherent responses. A joint benchmark for the two tasks by annotating the dialogue-based coreference dataset, MuDoCo, with rewritten queries. A novel joint learning framework that boosts query rewrite and outperforms SOTA for coreference resolution.
+            </p>
+          </div>
+        </div>
 
-        <!-- Teaching -->
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tr>
-              <td width="100%" valign="middle">
-                <heading>Teaching</heading>
-                <p>
-                  I have been a Teaching Assistant for the following courses:
-                    <ul>
-                      <li> CS544: Optimization in Vision and AI  at UIUC [Spring 2019]</li>
-                      <li> CS498: Applied Machine Learning at UIUC [Fall 2018] </li>
-                      <li> CS374: Algorithms and Models of Computation at  UIUC [Spring 2018] </li>
-                      <li> CS101: Introduction to Programming at IIT Kanpur [Spring 2017] </li>
-                    </ul>
-                </p>
-              </td>
-            </tr>
-        </table>
+        <!-- DST Parsing -->
+        <div class="publication">
+          <div class="publication-image">
+            <img src="images/dst.png" alt="Dialog State Tracking visualization">
+          </div>
+          <div class="publication-content">
+            <p>
+              <a href="https://aclanthology.org/2020.emnlp-main.651.pdf" class="papertitle">
+                Conversational semantic parsing for dialog state tracking
+              </a>
+              <br>
+              Jianpeng Chen, ... , <strong>Shruti Bhargava</strong>, ... , Jason D Williams, Hong Yu, Diarmuid O Seaghdha, Anders Johannsen
+              <br>
+              <em>EMNLP</em> 2020
+              <br>
+              <a href="https://github.com/apple/ml-tree-dst">[Dataset]</a>
+            </p>
+            <p>
+              Fresh perspective on dialog state tracking as a semantic parsing task over hierarchical representations, with compositionality, cross-domain knowledge sharing, and coreference. We present TreeDST, a dataset of 27k conversations with tree-structured states and system acts. Our encoder-decoder model leads to a 20% improvement over SOTA.
+            </p>
+          </div>
+        </div>
 
-        <!-- Reference -->
-        <p align="right"><a href="https://jonbarron.info/">[Web Cite]</a></p>
-      </td>
-    </tr>
-  </table>  
+        <!-- Captioning Bias -->
+        <div class="publication">
+          <div class="publication-image">
+            <img src="images/gender_debias.gif" alt="Gender debiasing visualization">
+          </div>
+          <div class="publication-content">
+            <p>
+              <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7Kl9w-sAAAAJ&citation_for_view=7Kl9w-sAAAAJ:9yKSN-GCB0IC" class="papertitle">
+                Exposing and Correcting the Gender Bias in Image Captioning Datasets and Models
+              </a>
+              <br>
+              <strong>Shruti Bhargava</strong>, <a href="https://scholar.google.com/citations?user=5H0arvkAAAAJ&hl=en">David Forsyth</a>
+              <br>
+              <em>arxiv</em> 2019
+              <br>
+            </p>
+            <p>
+              The task of image captioning implicitly involves gender identification. MS COCO dataset contains blatant gender bias in captions, arising from two main sources: statistical variation in data and flawed annotations. Biased data leads to concerning predictions by models. We propose a novel framework for gender-neutral captioning and independent gender classification using masking, reducing contextual bias. On an anti-stereotypical dataset, our approach outperforms the SOTA gender-based approaches.
+            </p>
+          </div>
+        </div>
 
+        <!-- Dandelion -->
+        <div class="publication">
+          <div class="publication-image">
+            <img src="images/dandelion.png" alt="Dandelion++ visualization">
+          </div>
+          <div class="publication-content">
+            <p>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3224424" class="papertitle">
+                Dandelion++ lightweight cryptocurrency networking with formal anonymity guarantees
+              </a>
+              <br>
+              <a href="https://www.andrew.cmu.edu/user/gfanti/">Giulia Fanti</a>, Shaileshh Bojja Venkatakrishnan, Surya bakshi, Bradley Denby, <strong>Shruti Bhargava</strong>, <a href="https://soc1024.ece.illinois.edu/">Andrew Miller</a>, <a href="http://pramodv.ece.illinois.edu/">Pramod Viswanath</a>
+              <br>
+              <em>SIGMETRICS</em> 2018
+              <br>
+              <a href="https://github.com/gfanti/dandelion-simulations">[code]</a>
+            </p>
+            <p>
+              Bitcoin's networking stack is shown to have anonymity vulnerabilities owing to the mechanism for broadcasting transactions, leading to large-scale deanonymization attacks. We present Dandelion++, a first-principles defense with near-optimal information-theoretic guarantees.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentorship Experience Section -->
+    <section class="section">
+      <h2 class="heading">Mentorship Experience</h2>
+      <ul>
+        <li><strong>Le Zhang</strong>, Ph.D. - Mila - Quebec AI Institute (Summer 2025) - <em>Spatial Thinking in Multimodal LLMs</em></li>
+        <li><strong>Atharva Kulkarni</strong>, MS - CMU (Summer 2023) - <em>Bridging the gap between Zero and Few-shot DST</em></li>
+        <li><strong>Yilun Zhu</strong>, Ph.D. - Georgetown University (Summer 2023) - <em>Context Understanding in Quantized LLMs</em></li>
+        <li><strong>Soundarya Krishnan</strong>, MS - CMU (Summer 2021) - <em>Grounding in Visual Memory for Multimodal Assistant</em></li>
+        <li><strong>Bo-Hsiang Tseng</strong>, Ph.D. - University of Cambridge (Summer 2020) - <em>Ellipsis and Anaphora in Dialogues</em></li>
+        <li><strong>Sahana Mohandoss</strong>, Rotation Engineer - Apple (Fall 2021) - <em>Data-efficient Screen Reference Resolution</em></li>
+      </ul>
+    </section>
+
+    <!-- Awards and Scholarships Section -->
+    <section class="section">
+      <h2 class="heading">Awards and Scholarships</h2>
+      <ul>
+        <li>Best Paper Award for "CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues", WeCNLP 2021</li>
+        <li>Grace Hopper Student Scholarship, Anita Borg Institute</li>
+        <li>Academic Excellence Award, IIT Kanpur</li>
+        <li>National Talent Search (NTS) Scholarship, Government of India</li>
+        <li>KVPY Fellowship, Department of Science and Technology, Government of India</li>
+      </ul>
+    </section>
+
+    <!-- Teaching Section -->
+    <section class="section">
+      <h2 class="heading">Teaching</h2>
+      <p>
+        I have served as a Teaching Assistant for graduate and undergraduate courses spanning optimization, machine learning, algorithms, and programming:
+      </p>
+      <ul>
+        <li>CS544: Optimization in Vision and AI at UIUC [Spring 2019]</li>
+        <li>CS498: Applied Machine Learning at UIUC [Fall 2018]</li>
+        <li>CS374: Algorithms and Models of Computation at UIUC [Spring 2018]</li>
+        <li>CS101: Introduction to Programming at IIT Kanpur [Spring 2017]</li>
+      </ul>
+    </section>
+
+    <!-- Reference -->
+    <p style="text-align: right; margin-top: 40px;">
+      <a href="https://jonbarron.info/">[Web Cite]</a>
+    </p>
+
+  </div>
 </body>
 
 </html>
